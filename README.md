@@ -366,6 +366,24 @@ Generate QR codes pointing to your landing page:
 3. Customize design if desired
 4. Download and print on flyers
 
+## 📄 Legal Pages
+
+The project includes Privacy Policy and Terms & Conditions pages required for Twilio A2P Brand registration:
+
+- **Privacy Policy**: `/privacy-policy.html` - Details data collection and usage
+- **Terms & Conditions**: `/terms-and-conditions.html` - Service terms and user agreement
+
+These pages are:
+
+- Accessible from the main landing page footer
+- Text-only and compliant with SMS regulations
+- Customizable for your specific needs
+
+**Note:** When registering your A2P Brand with Twilio, you'll need to provide:
+
+- Privacy Policy URL: `https://yourdomain.com/privacy-policy.html`
+- Terms & Conditions URL: `https://yourdomain.com/terms-and-conditions.html`
+
 ## 🐛 Troubleshooting
 
 ### Database Connection Fails
