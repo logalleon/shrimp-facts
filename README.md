@@ -50,7 +50,9 @@ shrimp-facts/
 
 ### Prerequisites
 
-- Node.js (v16 or higher)
+- **Node.js v20 LTS or higher** (v22 also supported)
+  - ⚠️ **Important:** Node.js v18 is NOT compatible (missing import assertion support)
+  - See `NODE-UPGRADE.md` for upgrade instructions
 - MariaDB (v10.5 or higher)
 - Twilio account with:
   - Account SID
