@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🦐 Shrimp Facts</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>🦐 Shrimp Facts</h1>
+        <p class="tagline">
+          Get fascinating shrimp facts delivered weekly via SMS!
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="info-section">
+          <p>
+            Subscribe to receive a random shrimp fact every week. It's free,
+            fun, and surprisingly educational!
+          </p>
+        </div>
+
+        <form id="subscribeForm">
+          <div class="form-group">
+            <label for="phoneNumber">Phone Number</label>
+            <input
+              type="tel"
+              id="phoneNumber"
+              name="phoneNumber"
+              placeholder="+1234567890"
+              autocomplete="tel"
+              required
+            />
+            <small class="hint">Include country code (e.g., +1 for US)</small>
+          </div>
+
+          <button type="submit" class="btn-primary">
+            <span class="btn-text">Subscribe</span>
+            <span class="btn-loading" style="display: none">Sending...</span>
+          </button>
+        </form>
+
+        <div id="message" class="message" style="display: none"></div>
+
+        <div class="footer-text">
+          <p>
+            <small
+              >By subscribing, you'll receive a weekly SMS with a shrimp fact.
+              Reply STOP at any time to unsubscribe.</small
+            >
+          </p>
+        </div>
+      </div>
+
+      <div class="fun-facts">
+        <h3>Did you know?</h3>
+        <ul>
+          <li>🦐 Shrimp can swim backwards</li>
+          <li>🌊 There are over 2,000 species of shrimp</li>
+          <li>❤️ A shrimp's heart is in its head</li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
