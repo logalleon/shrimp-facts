@@ -1,5 +1,7 @@
-const twilio = require('twilio');
-require('dotenv').config();
+import twilio from 'twilio';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 // Initialize Twilio client
 const client = twilio(
@@ -40,7 +42,7 @@ async function sendOptInMessage(phoneNumber) {
   return sendSMS(phoneNumber, message);
 }
 
-module.exports = {
+export {
   sendSMS,
   sendOptInMessage
 };

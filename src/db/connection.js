@@ -1,5 +1,7 @@
-const mariadb = require('mariadb');
-require('dotenv').config();
+import * as mariadb from 'mariadb';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 // Create connection pool
 const pool = mariadb.createPool({
@@ -27,4 +29,4 @@ async function testConnection() {
   }
 }
 
-module.exports = { pool, testConnection };
+export { pool, testConnection };

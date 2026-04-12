@@ -1,7 +1,8 @@
-const express = require('express');
+import express from 'express';
+import { pool } from '../db/connection.js';
+import twilio from 'twilio';
+
 const router = express.Router();
-const { pool } = require('../db/connection');
-const twilio = require('twilio');
 
 /**
  * POST /api/webhook
@@ -66,4 +67,4 @@ router.post('/', async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;

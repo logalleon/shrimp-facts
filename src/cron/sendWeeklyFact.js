@@ -10,12 +10,19 @@
  * 0 9 * * 1 cd /path/to/shrimp-facts && node src/cron/sendWeeklyFact.js
  */
 
-const path = require('path');
-require('dotenv').config({ path: path.join(__dirname, '../../.env') });
+import path from 'path';
+import { fileURLToPath } from 'url';
+import dotenv from 'dotenv';
+import { pool } from '../db/connection.js';
+import { sendSMS } from '../services/twilio.js';
+import { readFileSync } from 'fs';
 
-const { pool } = require('../db/connection');
-const { sendSMS } = require('../services/twilio');
-const facts = require('./facts.json');
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+dotenv.config({ path: path.join(__dirname, '../../.env') });
+
+const facts = JSON.parse(readFileSync(new URL('./facts.json', import.meta.url), 'utf-8'));
 
 async function sendWeeklyFacts() {
   console.log('\n🦐 Starting Weekly Shrimp Facts Distribution...');

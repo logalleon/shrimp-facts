@@ -1,10 +1,15 @@
-const express = require('express');
-const path = require('path');
-require('dotenv').config();
+import express from 'express';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import dotenv from 'dotenv';
+import { testConnection } from './db/connection.js';
+import subscribeRoute from './routes/subscribe.js';
+import webhookRoute from './routes/webhook.js';
 
-const { testConnection } = require('./db/connection');
-const subscribeRoute = require('./routes/subscribe');
-const webhookRoute = require('./routes/webhook');
+dotenv.config();
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 const PORT = process.env.PORT || 3000;

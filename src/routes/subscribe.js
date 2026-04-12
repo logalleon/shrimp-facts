@@ -1,7 +1,8 @@
-const express = require('express');
+import express from 'express';
+import { pool } from '../db/connection.js';
+import { sendOptInMessage } from '../services/twilio.js';
+
 const router = express.Router();
-const { pool } = require('../db/connection');
-const { sendOptInMessage } = require('../services/twilio');
 
 /**
  * POST /api/subscribe
@@ -87,4 +88,4 @@ router.post('/', async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;
