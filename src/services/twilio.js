@@ -38,7 +38,7 @@ async function sendSMS(to, body) {
  * @returns {Promise} Twilio message object
  */
 async function sendOptInMessage(phoneNumber) {
-  const message = `🦐 Welcome to Shrimp Facts!\n\nReply YES to subscribe to weekly shrimp facts, or reply STOP to opt out.`;
+  const message = `🦐 Welcome to Shrimp Facts!\n\nReply YES to subscribe to weekly shrimp facts, or reply STOP to opt out. Message and data rates may apply.`;
   return sendSMS(phoneNumber, message);
 }
 
